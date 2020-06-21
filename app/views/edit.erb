@@ -2,7 +2,7 @@
 
 <h1>Edit Article</h1>
 
-<form method="POST" action="/articles/<%= @article.id %>">
+<form method="post" action="/articles/<%= @article.id %>">
 <input id="hidden" type="hidden" name="_method" value="PATCH">
     <h2>Title:</h2>
     <input type="text" name="title" >
