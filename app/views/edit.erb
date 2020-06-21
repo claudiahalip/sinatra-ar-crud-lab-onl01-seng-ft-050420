@@ -1,8 +1,6 @@
 <!doctype html>
 
-<h2><%= @article.title%></h2>
-<br>
-<p> <%= @article.content%></p>
+<h1>Edit Article</h1>
 
 <form method="POST" action="/articles/<%= @article.id %>">
 <input id="hidden" type="hidden" name="_method" value="PATCH">
