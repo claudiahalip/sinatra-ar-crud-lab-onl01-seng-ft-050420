@@ -1,11 +1,10 @@
 <!doctype html>
 
 <h1>All Articles:</h1>
-<ul>
-  <%@articles.each do |a|  %>
-    <li><%=a.title%></li>
-    <li><%=a.content%></li>
-  <%end%>
-</ul>
+<%@articles.each do |a|  %>
+  <p>Title: <%= a.title %></p>
+  <p>Content: <%= a.content %></p>
+<%end%>
+
 
 </html>
