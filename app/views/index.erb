@@ -1,7 +1,7 @@
 <!doctype html>
 
 <h1>All Articles:</h1>
-<%@articles.each do |a|  %>
+<%@articles.each do |a| puts a.title %>
   <p>Title: <%= a.title %></p>
   <p>Content: <%= a.content %></p>
 <%end%>
