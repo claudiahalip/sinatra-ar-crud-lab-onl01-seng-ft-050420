@@ -2,8 +2,9 @@
 
 <h1>All Articles:</h1>
 <ul>
-  <%@articles.each do |a| puts %>
+  <%@articles.each do |a|  %>
     <li><%=a.title%></li>
+    <li><%=a.content%></li>
   <%end%>
 </ul>
 
