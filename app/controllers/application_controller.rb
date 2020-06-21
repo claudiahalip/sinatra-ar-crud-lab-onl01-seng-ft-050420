@@ -28,18 +28,19 @@ class ApplicationController < Sinatra::Base
   end 
   
   
+  post '/articles' do 
+    article = Article.create(title: params[:title], content: params[:content])
+    
+    redirect to "/articles/#{Article.last.id}"
+  end 
+  
   
   get '/articles/:id/edit' do 
      @article = Article.find_by(params[:id])
     erb :edit
   end 
   
-  post '/articles'do 
-    article = Article.create(title: params[:title], content: params[:content])
-    
-     redirect to "/articles/#{Article.last.id}"
-     
-  end 
+ 
   
   
   patch '/articles/:id' do 
